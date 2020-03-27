@@ -23,7 +23,7 @@ public:
     // see SimpleLRU.h
     bool Put(const std::string &key, const std::string &value) override {
         // TODO: sinchronization
-        std::lock_guard<std::mutex> loсk(user);
+        std::lock_guard<std::mutex> lock(user);
         return SimpleLRU::Put(key, value);
     }
 
